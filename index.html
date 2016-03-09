@@ -1,0 +1,129 @@
+<!DOCTYPE>
+<HTML>
+<Head>
+<script language=JavaScript> var message="Function Disabled!"; function clickIE4(){ if (event.button==2){ alert(message); return false; } } function clickNS4(e){ if (document.layers||document.getElementById&&!document.all){ if (e.which==2||e.which==3){ alert(message); return false; } } } if (document.layers){ document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS4; } else if (document.all&&!document.getElementById){ document.onmousedown=clickIE4; } document.oncontextmenu=new Function("alert(message);return false") </script>
+<link rel="shortcut icon" href="favicon.ico" >
+<link rel="stylesheet" type="text/css" href="stylex.css">
+<script src="fullscreen.js"></script>
+<script src="printscreen.js"></script>
+<script src="download.js"></script>
+<script src="dwd.js"></script>
+<script>
+function about() {
+    alert("Please enable pop-ups if asked to enjoy all features. Not compatible with touch devices yet. Open 'ScreenShot' in 'Paint' after download.");
+}
+</script>
+<script>
+function wPrint() {
+    window.print();
+}
+</script>
+
+<script>
+function about() {
+    alert("Please enable pop-ups if asked to enjoy all features. Not compatible with touch devices yet. Screenshot will be downloaded as "download" open this file in Paint.");
+}
+</script>
+<script src="jquery-1.11.0.min.js"></script>
+<script src="html2canvas.js"></script>
+<script src="jquery.plugin.html2canvas.js"></script>
+
+<script type="text/javascript" src="jquery-ui-1.10.1.js"></script>
+
+<script type="text/javascript" >
+ $(function() {    $( "#moveMe" ).draggable({ containment: "window" }); });
+
+</script>
+<script type="text/javascript">
+    function capture() {
+	
+            html2canvas($('body'),{
+                onrendered: function (canvas) {                     
+                            var imgString = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+		window.location.href = imgString;
+		//document.write('<img src="'+imgString+'"/>');
+                                  //  window.showModalDialog(imgString,'PrintScreen');
+	               //var sOptions = "width=800,height=800,location=0,menubar=0,toolbar=0,status=0";
+                                //window.open(imgString, "", sOptions);
+                
+            }
+        });
+}
+</script>
+<Title>AIO</Title>
+</Head>
+
+	<Body id = "b1">
+	<font color="red">Ads may appear on this page as this is a free website and used only for testing purpose. This page is for testing purpose forwarding or copying any of its contents may lead to copyright violation. <b>Dragging of the button is not supported on mobile devices. A desktop computer recommended</b></font><font color="blue"><b>Please click on "contact us" and take our survey, it takes less than a min!</b></font>
+	<table  align=center>
+	<tr>
+		<th><h1 align="center"><b>A I O</b></h1></th>
+		
+	</tr>
+	<tr>
+		<td id="main" border=1 id="content" align="top" bgcolor="#FFFFFF" >
+		
+		<a href="#openModal"><font size=200px>INSTRUCTIONS</font></a>
+		<p>Click on "INSTRUCTIONS"</p>
+<div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>Instructions</h2>
+		</div>
+</div>
+
+		<p align=center>What is 'AIO'?<p/>
+		<p align=center>AIO stands for 'ALL IN ONE'. As it states AIO is a revolutionary concept and now its reality. It is a floating button on your website! Hovering your mouse over
+		it reveals a menu with many options.</p>
+				<ul>
+		<br/><li>ScreenPDF</li>
+		<li>The first option is ScreenPDF. As the name suggests, clicking this option will create a .pdf file of the current page and will start automatic download. SCREEN PDF USES AN EXTERNAL API SO IT IS DEPENDENT ON THE API WHICH IS DEPENDENT ON THE RESPECTIVE WEBSITE.<br/></li>
+		
+		<br/><li>ScreenShot</li>
+		<li>Always wanted to take a screenshot of the webpage as we do on our phones? Now you can! clicking 'ScreenShot' will generate a screenshot of the current page and will start automatic download. The screenshot will be saved as "download", you can open the file using any application like MS Word, Paint (Recommended).<br/></li>
+		
+		<br/><li>Print</li>
+		<li>Print the screen easily just by one click. Not supported on mobile devices.<br/></li>
+		
+		<br/><li>Full Screen</li>
+		<li>Don't let other running disturb you. Go fullscreen and concentrate of the webpage you like. <br/></li>
+		
+		<br/><li>About</li>
+		<li>Have any FAQs? click here!<br/></li>
+		
+		<br/><li>Download</li>
+		<li>Download every thing on this page! just click 'Download' and you'll get all the links linked to the page and then you can download whatever you need.</br></li>
+		<br/>
+		<li>Contact - virajjpawar@gmail.com<img align=center height=50px src=favicon.png></li>
+		</ul>
+		</tr>
+		</td>
+		</table>
+<!-----button starts here---------->
+
+	<div id="moveMe"  style="position:fixed;top:4%;left:80%;z-index:50">	
+	<nav id="move">
+		<ul id="ul_1">
+			<li><div class="circular" id="moveMe" ></div>
+				<ul>
+					<li><a href="http://pdf-ace.com/pdfme/" target="_blank">ScreenPDF</a></li>
+					<li><a href="#" onclick="capture()" class="btn btn-inverse btn-large">ScreenShot</a></li>
+					<li><a href="#" onclick="wPrint()" class="btn btn-inverse btn-large">Print</a></li>
+					<li><a href="#" onclick="goFullscreen('b1'); return false" class="btn btn-inverse btn-large">Full Screen</a></li>
+					<li><a href="#" onclick="about()" class="btn btn-inverse btn-large">About</a></li>
+					<li><a href="#"  onclick="vyFunction()" class="btn btn-inverse btn-large">Download</a></li>
+					<li><a href="http://www.123contactform.com/form-1246589/Aio" class="blueLink13">Contact us</a>
+					
+					</li>
+
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	</div>
+	
+
+  
+		
+	</Body>
+</Html>
